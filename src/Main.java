@@ -4,7 +4,6 @@ import java.util.Comparator;
 
 class Main {
     public static void main(String[] args) {
-        Comparator<Person> pComp;
         ArrayList<Person> personList = new ArrayList<Person>();
         personList.add(new Person("Thomas", "Jefferson Murdok III", 29));
         personList.add(new Person("Thomas", "Jefferson Murdok Levy IV", 30));
@@ -16,7 +15,7 @@ class Main {
         for (int i = 0; i < personList.size(); i++)
             System.out.println(personList.get(i));
 
-        pComp = (Person p1, Person p2) ->
+        Comparator<Person> pComp = (p1, p2) ->
         {
             String[] surname1 = p1.getSurname().split(" ");
             String[] surname2 = p2.getSurname().split(" ");
