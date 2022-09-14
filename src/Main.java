@@ -22,7 +22,7 @@ class Main {
         for (int i = 0; i < personList.size(); i++)
             System.out.println(personList.get(i));
 
-        Predicate<Person> eraser = (Person p) -> {
+        Predicate<Person> eraser = p -> {
             return p.getAge() < 18;
         };
         personList.removeIf(eraser);
