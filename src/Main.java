@@ -22,9 +22,8 @@ class Main {
         for (int i = 0; i < personList.size(); i++)
             System.out.println(personList.get(i));
 
-        Predicate<Person> eraser = p -> {
-            return p.getAge() < 18;
-        };
+        Predicate<Person> eraser = p -> p.getAge() < 18;
+
         personList.removeIf(eraser);
         System.out.println("\nСписок лиц старше 18 лет:");
         for (int i = 0; i < personList.size(); i++)
